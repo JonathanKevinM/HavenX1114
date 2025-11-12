@@ -1,0 +1,243 @@
+/* === WALLET PAGE STYLING === */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #f9fafc;
+  color: #222;
+}
+
+/* Header */
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px 8%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.wallet-header h1 {
+  font-size: 1.5rem;
+  color: #2b2f7f;
+}
+
+/* ----------------- Navbar ----------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #081039;
+  border-bottom: 2px solid #66ccff; /* Light blue */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #66ccff; /* Light blue */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #cceeff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #66ccff;
+}
+
+
+/* Section Layout */
+.wallet-section {
+  padding: 50px 10%;
+}
+
+.wallet-feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+  gap: 50px;
+}
+
+.wallet-feature img {
+  width: 48%;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+.wallet-text {
+  width: 48%;
+}
+
+.wallet-text h2 {
+  color: #1e246a;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.wallet-text p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Footer */
+.wallet-footer {
+  background: #1c1f3b;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .wallet-feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .wallet-feature img,
+  .wallet-text {
+    width: 100%;
+  }
+
+  .wallet-section {
+    padding: 30px 6%;
+  }
+}
+
+/* ===== FULL WIDTH WALLET-STYLE FOOTER ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+.footer {
+  width: 100vw;       /* full viewport width */
+  background: #1c1f3b;
+  color: #ccc;
+  padding: 20px 0;    /* only top & bottom */
+  margin: 0;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  left: 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;          /* remove any outer margin */
+  padding: 0;         /* remove inner padding */
+  gap: 0;             /* remove flex gap */
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 33.33%;
+  margin: 0;           /* remove margin */
+  padding: 0;          /* remove padding */
+  box-sizing: border-box;
+  text-align: left;    /* align text to left */
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #4b6cb7;
+}
+
+.footer-about p,
+.footer-contact p,
+.footer-links a {
+  color: #ccc;
+  line-height: 1.7;
+  margin: 0;           /* remove spacing */
+  padding: 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #4b6cb7;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-social img:hover {
+  transform: scale(1.1);
+  filter: invert(63%) sepia(66%) saturate(493%) hue-rotate(189deg) brightness(95%) contrast(97%);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 20px;
+  padding: 15px 0;  /* only top & bottom */
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    padding: 0;   /* flush sides */
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact {
+    flex: 1 1 100%;
+    padding: 5px 0;
+    text-align: center; /* center on mobile */
+  }
+
+  .footer-social {
+    margin-top: 10px;
+  }
+}

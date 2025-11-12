@@ -1,0 +1,231 @@
+/* ----------------- Base ----------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.content-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* White background for login */
+}
+
+/* ----------------- Login Form ----------------- */
+.login-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.login-card {
+  background: #f0f8ff; /* Light blue / white */
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 204, 255, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.login-header h1 {
+  font-size: 2rem;
+  color: #00cccc; /* Light blue */
+  margin-bottom: 10px;
+}
+
+.login-header p {
+  font-size: 1rem;
+  color: #333; /* Dark text */
+  margin-bottom: 25px;
+}
+
+/* ===== FORM ===== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form label {
+  text-align: left;
+  font-weight: 500;
+  color: #555;
+}
+
+.login-form input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+  background: #ffffff;
+  color: #000;
+}
+
+.login-form input:focus {
+  border-color: #00cccc;
+  box-shadow: 0 0 6px #00cccc;
+  outline: none;
+}
+
+/* ===== LOGIN BUTTON ===== */
+.btn-login {
+  padding: 12px 25px;
+  background-color: #00cccc;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #0099cc;
+  transform: scale(1.02);
+}
+
+/* ===== SIGNUP LINK ===== */
+.signup-link {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.signup-link a {
+  color: #00cccc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------- Footer ----------------- */
+.footer {
+  background-color: #081039; /* Dark blue */
+  color: #cceeff; /* Light text */
+  padding: 50px 20px 20px;
+  border-top: 2px solid #66ccff; /* Light blue accent */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about, .footer-links, .footer-contact {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  color: #66ccff; /* Light blue */
+  margin-bottom: 15px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  color: #66ccff;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #cceeff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #66ccff;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+  color: #cceeff;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-social a img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1); /* White icons */
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #cceeff;
+  border-top: 1px solid #66ccff;
+  padding-top: 15px;
+}
+
+/* ----------------- Animations ----------------- */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 768px) {
+  .login-card {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about, .footer-links, .footer-contact {
+    text-align: center;
+  }
+
+  .footer-links ul, .footer-links li {
+    padding: 0;
+  }
+}

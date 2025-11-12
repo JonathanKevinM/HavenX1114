@@ -1,0 +1,235 @@
+/* ----------------- Base ----------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.content-wrap {
+  flex: 1; /* Takes remaining space above footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* White background for main content */
+}
+
+/* ----------------- Signup Form ----------------- */
+.signup-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-box {
+  background: #f0f8ff; /* Very light blue/white */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 204, 255, 0.2);
+  width: 380px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.logo {
+  font-size: 32px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #00cccc; /* Light blue for brand */
+}
+
+.logo span {
+  color: #0066cc; /* Darker blue accent */
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #333; /* Dark text for readability */
+  font-weight: 500;
+}
+
+.input-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555; /* Dark gray */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #000;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 6px #00cccc;
+  border-color: #00cccc;
+}
+
+.input-group input::placeholder {
+  color: #aaa;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #00cccc;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #0099cc;
+  transform: scale(1.02);
+}
+
+.signin-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signin-link a {
+  color: #00cccc;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------- Footer ----------------- */
+.footer {
+  background-color: #081039; /* Dark blue */
+  color: #cceeff; /* Light text */
+  padding: 50px 20px 20px;
+  border-top: 2px solid #66ccff; /* Light blue accent */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about, .footer-links, .footer-contact {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  font-size: 2rem;
+  color: #66ccff; /* Light blue */
+  margin-bottom: 15px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  color: #66ccff;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #cceeff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #66ccff;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+  color: #cceeff;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-social a img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1); /* White icons */
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #cceeff;
+  border-top: 1px solid #66ccff;
+  padding-top: 15px;
+}
+
+/* ----------------- Animations ----------------- */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 768px) {
+  .signup-box {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about, .footer-links, .footer-contact {
+    text-align: center;
+  }
+
+  .footer-links ul, .footer-links li {
+    padding: 0;
+  }
+}
